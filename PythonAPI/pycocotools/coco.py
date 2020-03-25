@@ -53,21 +53,20 @@ from matplotlib.patches import Polygon
 import numpy as np  # Used in loadRes(), showAnns(), loadNumpyAnnotations()
 # import copy
 # import itertools
-import mask as maskUtils  # Used in showAnns()
+import mask as maskUtils  # Used in showAnns() # from . import mask as maskUtils
 # import os
 from collections import defaultdict  # Used in __init__() and createIndex()
 # Used in loadRes()
 import sys
-from numpy import unicode
+from numpy import unicode  # I added.
 PYTHON_VERSION = sys.version_info[0]
 if PYTHON_VERSION == 2:
     from urllib import urlretrieve
 elif PYTHON_VERSION == 3:
     from urllib.request import urlretrieve
 
+
 # _isArrayLike Return whether the object has an attribute __iter__ and __len__
-
-
 def _isArrayLike(obj):
     return hasattr(obj, '__iter__') and hasattr(obj, '__len__')
 
